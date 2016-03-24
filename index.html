@@ -1,0 +1,87 @@
+<html ng-app="Final">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Final</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/assets/styles/style.css">
+</head>
+
+<body ng-controller="MainController as MC">
+    <div class="container col-sm-12 colorMain">
+        <div style="text-align: center;" class="row">
+            <div style="text-align: center;" class="col-sm-6">
+                <h2 style="text-align: center" class="color">Add a piece to your gallery</h2>
+                <!--This section is for customer input-->
+                <form style="text-align:center; margin-top: 25px;" class="col-sm-offset-3 addCard panel panel-default color" ng-submit="addNew(newMain)">
+                    <div class="row">
+                        <label class="font">Artists Name
+                            <input class="input" ng-model="newMain.artist" type="text">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="font">Art piece name
+                            <input class="input" ng-model="newMain.pieceName" type="text">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="font"> URL of art picture
+                            <input class="input" ng-model="newMain.url" type="url">
+                        </label>
+                    </div>
+                    <button class="fontButton" type="submit">Add new piece</button>
+                </form>
+            </div>
+            <div style="text-align: center" class="col-sm-6">
+                <!--This section if for Live preview-->
+                <h2 class="color"> Live preview for your new addition</h2>
+                <div>
+                    <div style="margin-top: 25px; text-align: center width:500px;" class="panel panel-default">
+                        <img style="height: 300px; max-width:400px; margin-top: 20px" ng-src="{{newMain.url}}" alt="Pic goes here">
+                        <div class="font">{{newMain.pieceName}}</div>
+                        <div class="font">{{newMain.artist}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row center color">
+            <h2>Current pieces in collection</h2>
+        </div>
+        <div class="row clearfix">
+            <!--this is where the array will be displayed-->
+            <div ng-repeat="item in main track by $index" class="col-sm-4">
+                <div class="card panel panel-default">
+                    <img style="height: 300px; max-width:400px; margin-top: 20px" ng-src="{{item.url}}" alt="Pic goes here">
+                    <div class="font">
+                        {{item.pieceName}}
+                    </div>
+                    <div class="font">
+                        {{item.artist}}
+                    </div>
+                    <button class="fontButton"ng-click="removeOld(item)">Remove piece</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <scripts start>-->
+
+    <!--Load angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+
+    <!--Load jquery-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!--Load Bootstrap-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--Load app files-->
+    <script src="app/init.js"></script>
+    <script src="app/controllers/maincontroller.js"></script>
+
+    <!-- </scripts end>-->
+</body>
+
+</html>

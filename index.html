@@ -11,30 +11,33 @@
     <div class="container col-sm-12 colorMain">
         <div style="text-align: center;" class="row">
             <div style="text-align: center;" class="col-sm-6">
-                <h2 style="text-align: center" class="color">Add a piece to your gallery</h2>
+                <h2 style="text-align: center; border-radius: 15px 50px" class="color">Add a piece to your gallery</h2>
                 <!--This section is for customer input-->
-                <form style="text-align:center; margin-top: 25px;" class="col-sm-offset-3 addCard panel panel-default color" ng-submit="addNew(newMain)">
+                <form style="text-align:center; margin-top: 25px; border-radius:30px" class="col-sm-offset-3 addCard panel panel-default color" ng-submit="addNew(newMain)">
                     <div class="row">
-                        <label class="font">Artists Name
-                            <input class="input" ng-model="newMain.artist" type="text">
+                        <label style="margin-top: 10px" class="font">
+                            <!--Artists Name-->
+                            <input class="input" ng-model="newMain.artist" type="text" style="text-align: center" placeholder="Artists Name">
                         </label>
                     </div>
                     <div class="row">
-                        <label class="font">Art piece name
-                            <input class="input" ng-model="newMain.pieceName" type="text">
+                        <label class="font">
+                            <!--Art piece name-->
+                            <input class="input" ng-model="newMain.pieceName" type="text" style="text-align: center" placeholder="Art Piece Name">
                         </label>
                     </div>
                     <div class="row">
-                        <label class="font"> URL of art picture
-                            <input class="input" ng-model="newMain.url" type="url">
+                        <label class="font"> 
+                            <!--URL of art picture-->
+                            <input class="input" ng-model="newMain.url" type="url" style="margin-bottom: 10px; text-align: center" placeholder="image URL">
                         </label>
                     </div>
-                    <button class="fontButton" type="submit">Add new piece</button>
+                    <button style="margin-bottom: 10px" class="fontButton" type="submit">Add new piece</button>
                 </form>
             </div>
             <div style="text-align: center" class="col-sm-6">
                 <!--This section if for Live preview-->
-                <h2 class="color"> Live preview for your new addition</h2>
+                <h2 style="border-radius: 50px 15px"class="color"> Live preview for your new addition</h2>
                 <div>
                     <div style="margin-top: 25px; text-align: center width:500px;" class="panel panel-default">
                         <img style="height: 300px; max-width:400px; margin-top: 20px" ng-src="{{newMain.url}}" alt="Pic goes here">

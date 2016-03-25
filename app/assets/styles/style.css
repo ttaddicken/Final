@@ -6,7 +6,7 @@
 }
 .center{
     text-align: center;
-    
+    border-radius: 15px 50px 30px;
     margin-top: 10px;   
     margin-bottom: 10px;
 }
@@ -14,7 +14,7 @@
     width: 400px;
 }
 .color{
-   background-color: lightblue; 
+   background-color: lightgray; 
 }
 .font{
     font-size: 35px;
@@ -23,7 +23,7 @@
     width:300px;
 }
 .colorMain{
-    background-color: #1a75ff;
+    background-color: gray;
 }
 .fontButton{
     font-size: 20px;

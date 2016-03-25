@@ -14,7 +14,7 @@
     width: 400px;
 }
 .color{
-   background-color: lightblue; 
+   background-color: lightgray; 
 }
 .font{
     font-size: 35px;
@@ -23,7 +23,7 @@
     width:300px;
 }
 .colorMain{
-    background-color: lightslategray;
+    background-color: gray;
 }
 .fontButton{
     font-size: 20px;
